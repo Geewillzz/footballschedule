@@ -38,7 +38,7 @@ jobs:
       id: build-image
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        IMAGE_TAG: footballschedule:2.0
+        IMAGE_TAG: footballfixture
       run: |
         # Build a docker container and
         # push it to ECR so that it can

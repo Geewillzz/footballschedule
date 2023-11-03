@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Football Fixture Schedule</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Football Fixture Schedule</h1>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Home Team</th>
+            <th>Away Team</th>
+        </tr>
+        {% for fixture in schedule %}
+        <tr>
+            <td>{{ fixture['date'] }}</td>
+            <td>{{ fixture['home_team'] }}</td>
+            <td>{{ fixture['away_team'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

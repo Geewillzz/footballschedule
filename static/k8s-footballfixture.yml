@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: footballfixture
+  labels:
+    app: footballfixture
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: footballfixture
+  template:
+    metadata:
+        labels:
+           app: footballfixture
+    spec:
+      containers:
+        - name: footballfixture
+          image: geewillzz/footballfixture:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+           - containerPort: 5000
+
+
+
+
+
